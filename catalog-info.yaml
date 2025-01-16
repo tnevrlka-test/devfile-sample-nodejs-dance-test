@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: devfile-sample-nodejs-dance-test 
+  description: Secure Supply Chain Example for User Provided Repo   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used rhtap-gitops as the grouping
+    argocd/app-selector: rhtap/gitops=devfile-sample-nodejs-dance-test
+    backstage.io/kubernetes-id: devfile-sample-nodejs-dance-test 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: tnevrlka-test/devfile-sample-nodejs-dance-test
+    quay.io/repository-slug: tnevrlka-test/devfile-sample-nodejs-dance-test
+  tags: ["experimental", "sscs", "sbom", "acs"] 
+spec:
+  type: service
+  owner: user:guest 
+  lifecycle: experimental
+ 
